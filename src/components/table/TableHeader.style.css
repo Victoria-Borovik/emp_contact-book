@@ -1,0 +1,142 @@
+.thead {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.thead-row {
+  margin: 0 40px 0 24px;
+  flex: 1 1 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thead-row th {
+  font-weight: normal;
+  text-align: left;
+}
+
+.thead-icon {
+  padding: 0;
+  flex: 1 1 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thead-icon-btn {
+  position: relative;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  border: none;
+
+  background-color: transparent;
+}
+
+.thead-icon-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 0; 
+  height: 0;
+  margin: auto;
+
+  border: 3px solid transparent;
+  border-radius: 50%;
+
+  box-shadow:
+    0 -7px 0 1px var(--dark-blue),
+    0 7px 0 1px var(--dark-blue),
+    7px 0 0 1px var(--dark-blue),
+    -7px 0 0 1px var(--dark-blue);
+}
+
+.thead-name {
+  position: relative;
+  
+  flex: 1 1 197px;
+
+  display: flex;
+}
+
+.thead-name:hover {
+  opacity: 0.8;
+}
+
+.arrow-ascending {
+  margin: 10px;
+  margin-top: 19px;
+  border: 7px solid transparent; 
+  border-top: 7px solid var(--dark-blue);
+  content: '';
+}
+
+.arrow-descending {
+  margin: 10px;
+  margin-bottom: 19px;
+  border: 7px solid transparent; 
+  border-bottom: 7px solid var(--dark-blue);
+  content: '';
+}
+
+.thead-number {
+  flex: 1 1 175px;
+
+  font-family: "Inter SemiBold", sans-serif;
+}
+
+.thead-address {
+  flex: 1 1 335px;
+}
+
+.thead-email {
+  flex: 1 1 245px;
+}
+
+.thead-edit {
+  flex: 1 1 0px;
+}
+
+.thead-btn {
+  display: none;
+
+  width: 180px;
+  height: 36px;
+  margin: 0 10px;
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.thead-btn:hover {
+  background-color: var(--light-blue);
+}
+
+.thead-btn.active {
+  display: block;
+}

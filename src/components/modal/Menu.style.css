@@ -1,0 +1,182 @@
+.modal-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal-menu-content {
+  width: 436px;
+  height: 436px;
+
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.modal-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-list li {
+  list-style-type: none;
+}
+
+.menu-list a {
+  text-decoration: none;
+}
+
+.menu-item {
+  width: 218px;
+  height: 218px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--white);  
+}
+
+.menu-item-top {
+  border-top-left-radius: 100%;
+  background-image: radial-gradient(
+    circle at bottom right,
+    transparent 61px,
+    var(--white) 62px
+  );
+}
+
+.menu-item-right {
+  border-top-right-radius: 100%;
+  background: radial-gradient(
+    circle at bottom left,
+    transparent 61px,
+    var(--white) 62px
+  );
+}
+
+.menu-item-left {
+  border-bottom-left-radius: 100%;
+  background: radial-gradient(
+    circle at top right,
+    transparent 61px,
+    var(--white) 62px
+  );
+}
+
+.menu-item-bottom {
+  border-bottom-right-radius: 100%;
+  background: radial-gradient(
+    circle at top left,
+    transparent 61px,
+    var(--white) 62px
+  );
+}
+
+.menu-item-top:hover {
+  background: radial-gradient(
+    circle at bottom right,
+    transparent 61px,
+    var(--dark-blue) 62px
+  );
+}
+
+.menu-item-right:hover {
+  background: radial-gradient(
+    circle at bottom left,
+    transparent 61px,
+    var(--dark-blue) 62px
+  );
+}
+
+.menu-item-left:hover {
+  background: radial-gradient(
+    circle at top right,
+    transparent 61px,
+    var(--dark-blue) 62px
+  );
+}
+
+.menu-item-bottom:hover {
+  background: radial-gradient(
+    circle at top left,
+    transparent 61px, 
+    var(--dark-blue) 62px
+  );
+}
+
+.menu-item-wrap {
+  position: relative;
+
+  width: 132px;
+  height: 132px;
+
+  flex: 1 1 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(-45deg);
+}
+
+.wrap-top {
+  padding-top: 26px;
+}
+
+.wrap-left {
+  padding-left: 26px;
+}
+
+.wrap-right {
+  padding-right: 26px;
+}
+
+.wrap-bottom {
+  padding-bottom: 26px;
+}
+
+.menu-item-text {
+  width: 132px;
+  height: 32px;
+  margin: 8px 0 0 0;
+
+  font-family: "Inter SemiBold";
+  font-size: 13px;
+  text-align: center;
+
+  color: var(--dark-blue);
+}
+
+.menu-item:hover .menu-item-text {
+  color: var(--white);
+}
+
+.menu-item:hover .menu-item-img * {
+  fill: var(--white);
+}
+
+.menu-item-import {
+  display: none;
+}
+

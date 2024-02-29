@@ -1,0 +1,19 @@
+.scroll-table {
+	table-layout: fixed;
+}
+
+.scroll-table-body {
+  height: 100vh;
+
+  overflow: auto;
+
+  background-color: var(--light-grey);
+}
+.scroll-table-body table {
+  margin: 0;
+  padding: 110px 24px 24px;
+
+  display: flex;
+  flex-direction: column;
+
+}

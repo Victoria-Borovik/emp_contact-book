@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter SemiBold";
+  src: url("../fonts/Inter-SemiBold.ttf");
+}
+
+:root {
+  --dark-blue: #273B69;
+  --grey: #C4C4C4;
+  --white:  #FEFEFE;
+  --light-blue: #E5EAF4;
+  --light-grey: #E3E5EA;
+}
+
+.App {
+  height: 100%;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
