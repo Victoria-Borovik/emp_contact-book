@@ -10,7 +10,27 @@ const localStorageMiddleware = ({ getState }) => (next) => (action) => {
 
 const uploadLocalStore = () => {
   if (localStorage.getItem('applicationState') !== null) {
-    return JSON.parse(localStorage.getItem('applicationState'));
+    const state = (JSON.parse(localStorage.getItem('applicationState')))
+    state.ui = {
+      searchForm: {
+        value: '',
+      },
+      modal: {
+        menuIsActive: false,
+        addContactFormIsActive: false,
+        editContactFormIsActive: false,
+        contactInfoIsActive: false,
+      },
+      editMode: {
+        isActive: false,
+        contactId: null,
+      },
+      viewedContactId: null,
+      typeSort: null,
+      contactsToRenderCount: 20,
+    };
+    console.log(state)
+    return state;
   }
 };
 

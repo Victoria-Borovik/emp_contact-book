@@ -16,7 +16,7 @@ const initialState = {
   },
   viewedContactId: null,
   typeSort: null,
-  contactsToRenderCount: 10,
+  contactsToRenderCount: 20,
 };
 
 const uiSlice = createSlice({

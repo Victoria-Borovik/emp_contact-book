@@ -31,14 +31,14 @@ const СontactInfo = () => {
           <span>&#128242;</span>
           <span><a href={`tel:${normalizeTel(contact.tel)}`}>{contact.tel}</a></span>
         </h3>
-        <div className="view-email">
+        {contact.email && <div className="view-email">
           <span>&#128232;</span>
           <span><a href={`mailto:${contact.email}`}>{contact.email}</a></span>
-        </div>
-        <div className="view-address">
+        </div>}
+        {contact.address && <div className="view-address">
           <span>&#127968;</span>
           <span className="view-email">{contact.address}</span>
-        </div>
+        </div>}
 
       </div>
     </div>

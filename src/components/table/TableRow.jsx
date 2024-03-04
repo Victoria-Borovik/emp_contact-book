@@ -21,8 +21,8 @@ const filterContacts = (contacts, value) => (
     const { name, tel, address, email } = contact;
     return normalize(name).includes(normalize(value))
       || normalizeTel(tel).includes(normalizeTel(value))
-      || normalize(address).includes(normalize(value))
-      || normalize(email).includes(normalize(value));
+      || (address && normalize(address).includes(normalize(value)))
+      || (email && normalize(email).includes(normalize(value)));
   })
 );
 
@@ -59,7 +59,6 @@ const TableRow = () => {
 
   const contacts = reviseConatacts(contactsEntries);
   let contactsToRender = contacts.slice(0, contactsToRenderCount);
-  console.log(contactsToRender)
 
   const handleScroll = (scrolledEl) => () => {
     if (contactsToRenderCount >= contactsCount) return;
