@@ -29,7 +29,6 @@ const uploadLocalStore = () => {
       typeSort: null,
       contactsToRenderCount: 20,
     };
-    console.log(state)
     return state;
   }
 };
